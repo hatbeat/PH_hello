@@ -31,6 +31,15 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// JPA (Hibernate 포함)
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// MariaDB JDBC Driver
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
+	// Log4j2 (Spring Boot 기본 logging → Logback을 Log4j2로 교체)
+	implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 }
 
 tasks.named('test') {
