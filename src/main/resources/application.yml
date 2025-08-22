@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    include:
+      - database
+  application:
+    name: ph_hello
+  jpa:
+    hibernate:
+      ddl-auto: update   
+    show-sql: false      
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    root: WARN                
+    jdbc.audit: WARN
+    jdbc.connection: WARN
+    jdbc.resultset: WARN
+    jdbc.sqltiming: WARN
+    com.zaxxer.hikari: WARN
+    jdbc.sqlonly: WARN
+    org.hibernate: WARN
